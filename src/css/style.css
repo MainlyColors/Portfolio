@@ -7,6 +7,7 @@
 *::after {
   box-sizing: border-box;
   font-family: var(--font-primary);
+  margin: 0;
 }
 
 *:root {
@@ -18,7 +19,8 @@
   --background-tertiary: #2b2a33;
 
   --border-primary: #52525e;
-  --border-secondary: #3a3944;
+  /* --border-secondary: #3a3944; */
+  --border-secondary: #23222b;
   --button-primary-default: #fbfbfe;
   --button-primary-hover: #cfcfd8;
   --button-primary-active: #9f9fad;
@@ -33,9 +35,114 @@
 }
 
 /******************************************
+/* Resets
+/*******************************************/
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/******************************************
+/* standard styles
+/*******************************************/
+
+.btn,
+.btn-fill {
+  padding: 0.9375rem 3.125rem;
+  color: var(--border-primary);
+  border: 0.125rem solid var(--border-primary);
+  border-radius: 0.3125rem;
+}
+
+.btn-fill {
+  background-color: var(--button-primary-hover);
+}
+
+/******************************************
 /* LAYOUT
 /*******************************************/
 body {
   height: 100vh;
+}
+
+header,
+.projectsContainer,
+.techContainer {
+  padding: 0 7.5rem;
+  background-color: var(--background-secondary);
+}
+
+.hero,
+.techContainer {
+  padding: 0 7.5rem;
   background-color: var(--background-primary);
+}
+
+/*********** header ***********/
+
+header {
+  height: 4.375rem;
+}
+
+header nav,
+header ul {
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+nav a {
+  padding: 0.625rem 1.75rem;
+  color: var(--text-primary);
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.resume-link {
+  padding: 0.625rem 1.875rem;
+  font-weight: 700;
+}
+
+/*********** hero ***********/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  height: 59.625rem;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--font-fancy);
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 0.95;
+}
+
+.hero p {
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.55rem;
+}
+
+.hero a {
+  margin-top: 1.0625rem;
+  font-weight: 700;
 }
