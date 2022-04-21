@@ -194,6 +194,11 @@ h2 {
   height: 31.25rem;
   border-radius: 1.5625rem;
   overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card div:first-of-type {
